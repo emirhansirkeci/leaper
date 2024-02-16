@@ -2,6 +2,8 @@ const targetElement = document.querySelector(
   "#appMountPoint > div > div > div.watch-video"
 );
 
+console.log("Skip it");
+
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     const node = mutation.addedNodes[0];
