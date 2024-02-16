@@ -9,10 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://www.netflix.com/watch*",
-        "http://www.netflix.com/watch*"
-      ],
+      "matches": ["https://www.netflix.com/*", "http://www.netflix.com/*"],
       "run_at": "document_end",
       "js": ["content/netflix/index.js", "content/netflix/utils/notify.js"],
       "css": ["content/netflix/style/style.css"]
