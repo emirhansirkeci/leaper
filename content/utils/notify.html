@@ -1,0 +1,42 @@
+<style>
+  .notify-wrapper {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+    /* pointer-events: none; */
+  }
+
+  .notify {
+    padding: 0px 32px;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .notify-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+</style>
+<div class="notify-wrapper">
+  <div class="notify">
+    <!-- <div class="notify-icon">⚡</div> -->
+    <label class="notify-text">⚡ Automatically skipped</label>
+  </div>
+</div>

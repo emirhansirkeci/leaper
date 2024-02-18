@@ -18,12 +18,26 @@
       "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
       "run_at": "document_end",
       "js": ["content/youtube/index.js"]
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "http://www.youtube.com/*, https://www.netflix.com/*",
+        "http://www.netflix.com/*"
+      ],
+      "run_at": "document_end",
+      "js": ["content/utils/notify.js"]
     }
   ],
   "web_accessible_resources": [
     {
-      "matches": [],
-      "resources": []
+      "matches": [
+        "https://www.youtube.com/*",
+        "http://www.youtube.com/*",
+        "https://www.netflix.com/*",
+        "http://www.netflix.com/*"
+      ],
+      "resources": ["content/utils/notify.html"]
     }
   ],
   "action": {
