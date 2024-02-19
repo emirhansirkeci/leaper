@@ -1,7 +1,25 @@
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  if (changeInfo.status === "complete") {
-    chrome.tabs.sendMessage(tabId, {
-      message: "tab-updated",
+  try {
+    if (changeInfo.status === "complete" && isValidUrl(tab.url)) {
+      console.log({
+        currently_watching: tab.url,
+      });
+
+      chrome.tabs.sendMessage(tabId, {
+        message: "tab-updated",
+      });
+    }
+  } catch (error) {
+    console.log({
+      error,
+      url: tab.url,
+      isValidUrl: isValidUrl(tab.url),
+      tab,
     });
   }
 });
+
+function isValidUrl(url) {
+  const r = /^http.*\/watch/i;
+  return r.test(url);
+}

@@ -4,6 +4,12 @@
   "version": "1.0.0",
   "description": "Skip it",
   "permissions": [],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "http://www.youtube.com/*",
+    "https://www.netflix.com/*",
+    "http://www.netflix.com/*"
+  ],
   "background": {
     "service_worker": "./background/index.js"
   },

@@ -1,10 +1,6 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === "tab-updated") {
-    const url = document.location.href;
-
-    if (url.includes("/watch")) {
-      main();
-    }
+    main();
   }
 });
 
@@ -13,7 +9,11 @@ function main() {
     "#appMountPoint > div > div > div.watch-video"
   );
 
-  console.log("Skip it");
+  console.log({
+    status: "Working well",
+    site: "Netflix",
+    targetElement,
+  });
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
