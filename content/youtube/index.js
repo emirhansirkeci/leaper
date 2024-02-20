@@ -4,23 +4,18 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
 });
 
-// document.querySelector(".ytp-ad-player-overlay-layout__skip-or-preview-container")
-
 function main() {
-  const targetElement = document.querySelector("#player");
-
   console.log({
     status: "Working well",
     site: "YouTube",
-    targetElement,
   });
 
   const observer = new MutationObserver((mutations) => {
-    const skipButtonContainer = targetElement.querySelector(
+    const skipButtonContainer = document.querySelector(
       "span.ytp-ad-skip-button-container"
     );
 
-    const skipButton = targetElement.querySelector(
+    const skipButton = document.querySelector(
       "button.ytp-ad-skip-button-modern"
     );
 
@@ -35,5 +30,5 @@ function main() {
   });
 
   const config = { childList: true, subtree: true };
-  observer.observe(targetElement, config);
+  observer.observe(document, config);
 }
