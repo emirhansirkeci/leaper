@@ -3,10 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skip It</title>
+    <title>Skip It Settings</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Skip It</h1>
+    <h1>Settings</h1>
+    <hr />
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="youtube"
+      />
+      <p class="form-check-label" for="youtube">Skip YouTube ads</p>
+    </div>
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="netflix"
+      />
+      <p class="form-check-label" for="netflix">
+        Skip Netflix intros and outros
+      </p>
+    </div>
   </body>
 </html>

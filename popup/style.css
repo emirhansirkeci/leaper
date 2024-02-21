@@ -1,4 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
 body {
-  width: 400px;
+  width: 600px;
   text-align: center;
+  padding: 16px 32px;
+  font-family: Raleway;
+  color: #111;
+}
+
+.form-switch {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-switch input {
+  margin-right: 12px;
 }
