@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.message === "tab-updated") {
+  if (request.message === "supported-site-detected") {
     main();
   }
 });

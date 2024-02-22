@@ -6,7 +6,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
       });
 
       chrome.tabs.sendMessage(tabId, {
-        message: "tab-updated",
+        message: "supported-site-detected",
       });
     }
   } catch (error) {
