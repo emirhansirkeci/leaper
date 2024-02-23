@@ -11,7 +11,7 @@ async function main() {
 
   console.log({
     status: "Working well",
-    site: "Netflix",
+    site: "Youtube",
   });
 
   const observer = new MutationObserver((mutations) => {
