@@ -1,5 +1,5 @@
-let netflix = document.querySelector("#youtube");
-let youtube = document.querySelector("#netflix");
+let netflix = document.querySelector("#netflix");
+let youtube = document.querySelector("#youtube");
 
 (async function updateSwitches() {
   const { switchStates } = await chrome.storage.local.get(["switchStates"]);
