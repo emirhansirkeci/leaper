@@ -17,7 +17,7 @@
     {
       "matches": ["https://www.netflix.com/*", "http://www.netflix.com/*"],
       "run_at": "document_end",
-      "js": ["content/netflix/index.js", "content/netflix/utils/notify.js"],
+      "js": ["content/utils/notify.js", "content/netflix/index.js"],
       "css": ["content/netflix/style/style.css"]
     },
     {

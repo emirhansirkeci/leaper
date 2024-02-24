@@ -9,15 +9,15 @@ async function main() {
 
   if (!switchStates.netflix) return;
 
+  const targetElement = document.querySelector(
+    "#appMountPoint > div > div > div.watch-video"
+  );
+
   console.log({
     status: "Working well",
     site: "Netflix",
     targetElement,
   });
-
-  const targetElement = document.querySelector(
-    "#appMountPoint > div > div > div.watch-video"
-  );
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
@@ -29,7 +29,9 @@ async function main() {
       );
 
       if (skipButton) {
-        return skipButton.click();
+        skipButton.click();
+        notify();
+        return;
       }
 
       const nextEpisodeButton = node.querySelector(
@@ -37,7 +39,9 @@ async function main() {
       );
 
       if (nextEpisodeButton) {
-        return nextEpisodeButton.click();
+        nextEpisodeButton.click();
+        notify();
+        return;
       }
     });
   });

@@ -1,7 +1,7 @@
 <style>
   .notify-wrapper {
     position: fixed;
-    top: 20%;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -14,8 +14,14 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     visibility: hidden;
     opacity: 0;
-    transition: all 0.1s ease-in;
-    /* pointer-events: none; */
+    transition: all 0.2s ease-in;
+    z-index: 999999;
+    pointer-events: none;
+  }
+
+  .notify-wrapper.show {
+    visibility: visible;
+    opacity: 1;
   }
 
   .notify {

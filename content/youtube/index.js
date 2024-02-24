@@ -31,6 +31,7 @@ async function main() {
     }
 
     skipButton.click();
+    notify();
   });
 
   const config = { childList: true, subtree: true };
