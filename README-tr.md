@@ -2,7 +2,7 @@
 
 ## Uzantıyı Yüklemek ve Kullanmak
 
-_Not: Uzantı henüz Chrome Web Mağazası'nda mevcut değil._
+_**Not:** Uzantı henüz Chrome Web Mağazası'nda mevcut değil._
 
 Bu uzantıyı hemen kullanmak veya geliştirmeye katkıda bulunmak isteyenler için aşağıdaki adımları takip edin.
 
@@ -11,7 +11,7 @@ Bu uzantıyı hemen kullanmak veya geliştirmeye katkıda bulunmak isteyenler i�
 3. 'Daha fazla araç' seçeneğini seçin ve ardından 'Uzantılar' kısmına gidin.
 4. Sağ üst köşede 'Geliştirici modu' seçeneğini etkinleştirin.
 5. 'Paketlenmemiş' üzerine tıklayın ve indirdiğiniz klasörü seçin.
-6. Uzantıyı başarıyla yükledikten sonra tarayıcınızı yeniden başlatın.
+6. Uzantıyı başarıyla yükledikten sonra aktif olan sekmelerinizi yenileyerek kullanmaya başlayabilirsiniz.
 
 ## Desteklenen Siteler
 
