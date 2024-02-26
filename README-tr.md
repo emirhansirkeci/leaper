@@ -8,9 +8,9 @@ Bu uzantıyı hemen kullanmak veya geliştirmeye katkıda bulunmak isteyenler i�
 
 1. Github deposunu bilgisayarınıza klonlayın veya ZIP dosyası olarak indirin.
 2. Chrome tarayıcınızı açın ve sağ üst köşedeki üç noktaya tıklayın.
-3. 'Daha fazla araç' seçeneğini seçin ve ardından 'Uzantılar' kısmına gidin.
-4. Sağ üst köşede 'Geliştirici modu' seçeneğini etkinleştirin.
-5. 'Paketlenmemiş' üzerine tıklayın ve indirdiğiniz klasörü seçin.
+3. Açılan menüde `Uzantılar` seçeneğine gelin ve `Uzantıları yönet` butonuna tıklayın.
+4. Sağ üst köşede `Geliştirici modu` seçeneğini etkinleştirin.
+5. `Paketlenmemiş öğe yükle` üzerine tıklayın ve indirdiğiniz klasörü seçin.
 6. Uzantıyı başarıyla yükledikten sonra aktif olan sekmelerinizi yenileyerek kullanmaya başlayabilirsiniz.
 
 ## Desteklenen Siteler
