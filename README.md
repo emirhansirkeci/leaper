@@ -1,11 +1,6 @@
-## Supported Sites
+[![tr](https://img.shields.io/badge/lang-tr-blue.svg)](https://github.com/emirhansirkeci/skip-it/blob/main/README-tr.md)
 
-- Netflix
-  - Skips Intro and Outro
-- Youtube
-  - Skips Ads
-
-## How to Use
+## How to Install and Use the Extension
 
 As of now, the extension is not available on the Chrome Web Store. For those who want to use this extension immediately or contribute to its development, follow the steps below.
 
@@ -15,3 +10,10 @@ As of now, the extension is not available on the Chrome Web Store. For those who
 4. Enable the 'Developer mode' option in the upper right corner.
 5. Click on 'Load unpacked' and choose the folder you downloaded.
 6. After successfully installing the extension, restart your browser.
+
+## Supported Sites
+
+- **Netflix:**
+  _Especially when watching a series, it automatically skips the intro and credits to immediately move on to the next episode._
+- **Youtube:**
+  _Automatically skips ads when the **skip ad** button is available on the page_
