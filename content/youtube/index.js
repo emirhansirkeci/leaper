@@ -7,11 +7,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 async function main() {
   const { switchStates } = await chrome.storage.local.get(["switchStates"]);
 
-  if (!switchStates.youtube) return;
+  if (switchStates?.youtube === false) return;
 
   console.log({
     status: "Working well",
     site: "Youtube",
+    switchStates,
   });
 
   const observer = new MutationObserver((mutations) => {

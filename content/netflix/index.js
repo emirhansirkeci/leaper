@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 async function main() {
   const { switchStates } = await chrome.storage.local.get(["switchStates"]);
 
-  if (!switchStates.netflix) return;
+  if (switchStates?.netflix === false) return;
 
   const targetElement = document.querySelector(
     "#appMountPoint > div > div > div.watch-video"
@@ -17,6 +17,7 @@ async function main() {
     status: "Working well",
     site: "Netflix",
     targetElement,
+    switchStates,
   });
 
   const observer = new MutationObserver((mutations) => {
