@@ -12,5 +12,5 @@ function notify() {
 
   setTimeout(() => {
     wrapper.classList.remove("show");
-  }, 1500);
+  }, 2500);
 }
