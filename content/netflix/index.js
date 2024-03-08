@@ -1,24 +1,23 @@
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(async function (request) {
   if (request.message === "supported-site-detected") {
+    const { switchStates } = await chrome.storage.local.get(["switchStates"]);
+
+    if (switchStates?.netflix === false) return;
+
+    console.log({
+      status: "Working well",
+      site: "Netflix",
+      switchStates,
+    });
+
     main();
   }
 });
 
 async function main() {
-  const { switchStates } = await chrome.storage.local.get(["switchStates"]);
-
-  if (switchStates?.netflix === false) return;
-
   const targetElement = document.querySelector(
     "#appMountPoint > div > div > div.watch-video"
   );
-
-  console.log({
-    status: "Working well",
-    site: "Netflix",
-    targetElement,
-    switchStates,
-  });
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {

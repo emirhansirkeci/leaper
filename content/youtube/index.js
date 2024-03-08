@@ -1,20 +1,20 @@
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(async function (request) {
   if (request.message === "supported-site-detected") {
+    const { switchStates } = await chrome.storage.local.get(["switchStates"]);
+
+    if (switchStates?.youtube === false) return;
+
+    console.log({
+      status: "Working well",
+      site: "Youtube",
+      switchStates,
+    });
+
     main();
   }
 });
 
 async function main() {
-  const { switchStates } = await chrome.storage.local.get(["switchStates"]);
-
-  if (switchStates?.youtube === false) return;
-
-  console.log({
-    status: "Working well",
-    site: "Youtube",
-    switchStates,
-  });
-
   const observer = new MutationObserver((mutations) => {
     const skipButtonContainer = document.querySelector(
       "span.ytp-ad-skip-button-container"
