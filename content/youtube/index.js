@@ -1,13 +1,7 @@
 chrome.runtime.onMessage.addListener(async function (request) {
-  if (request.message === "youtube") {
-    const { switchStates } = await chrome.storage.local.get(["switchStates"]);
-
-    if (switchStates?.youtube === false) return;
-
+  if (request.activeSite === "youtube") {
     console.log({
       status: "Working well",
-      site: "Youtube",
-      switchStates,
     });
 
     main();

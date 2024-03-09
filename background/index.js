@@ -3,46 +3,35 @@ const SupportedSites = {
   netflix: "netflix",
 };
 
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  const siteInfo = isValidUrl(tab.url);
+chrome.tabs.onUpdated.addListener(async function (tabId, changeInfo, tab) {
+  if (changeInfo.status != "complete") return;
 
-  if (changeInfo.status != "complete" && !siteInfo.valid) return;
+  const info = siteInfo(tab.url);
 
-  if (siteInfo.site === SupportedSites.youtube) {
+  if (!info.valid) return;
+
+  const { switchStates } = await chrome.storage.local.get(["switchStates"]);
+
+  if (info.site === SupportedSites.youtube && switchStates.youtube) {
     chrome.tabs.sendMessage(tabId, {
-      message: siteInfo.site,
+      activeSite: info.site,
     });
   }
 
-  if (siteInfo.site === SupportedSites.netflix) {
+  if (info.site === SupportedSites.netflix && switchStates.netflix) {
     chrome.tabs.sendMessage(tabId, {
-      message: siteInfo.site,
-    });
-  }
-
-  return;
-  try {
-    if (changeInfo.status === "complete" && isValidUrl(tab.url)) {
-      console.log({
-        currently_watching: tab.url,
-      });
-
-      chrome.tabs.sendMessage(tabId, {
-        message: "supported-site-detected",
-      });
-    }
-  } catch (error) {
-    console.log({
-      error,
-      url: tab.url,
-      isValidUrl: isValidUrl(tab.url),
-      tab,
+      activeSite: info.site,
     });
   }
 });
 
-function isValidUrl(url) {
-  if (!/^http.*\/watch/i.test(url)) return;
+function siteInfo(url) {
+  if (!/^http.*\/watch/i.test(url)) {
+    return {
+      site: "",
+      valid: false,
+    };
+  }
 
   if (url.includes(SupportedSites.netflix)) {
     return {
@@ -51,9 +40,9 @@ function isValidUrl(url) {
     };
   }
 
-  if (url.includes(SupportedSites.netflix)) {
+  if (url.includes(SupportedSites.youtube)) {
     return {
-      site: SupportedSites.netflix,
+      site: SupportedSites.youtube,
       valid: true,
     };
   }
