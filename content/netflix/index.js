@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener(async function (request) {
-  if (request.message === "supported-site-detected") {
+  if (request.message === "netflix") {
     const { switchStates } = await chrome.storage.local.get(["switchStates"]);
 
     if (switchStates?.netflix === false) return;

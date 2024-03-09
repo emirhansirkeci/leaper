@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener(async function (request) {
-  if (request.message === "supported-site-detected") {
+  if (request.message === "youtube") {
     const { switchStates } = await chrome.storage.local.get(["switchStates"]);
 
     if (switchStates?.youtube === false) return;
