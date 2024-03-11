@@ -17,7 +17,7 @@ _**Not:** Uzantı henüz Chrome Web Mağazası'nda mevcut değil._
 
 Bu uzantıyı hemen kullanmak veya geliştirmeye katkıda bulunmak isteyenler için aşağıdaki adımları takip edin.
 
-1. Github deposunu bilgisayarınıza klonlayın veya ZIP dosyası olarak indirin.
+1. Github deposunu bilgisayarınıza klonlayın veya [son yayınlanan sürümü](https://github.com/emirhansirkeci/leaper/releases) indirin.
 2. Chrome tarayıcınızı açın ve sağ üst köşedeki üç noktaya tıklayın.
 3. Açılan menüde `Uzantılar` seçeneğine gelin ve `Uzantıları yönet` butonuna tıklayın.
 4. Sağ üst köşede `Geliştirici modu` seçeneğini etkinleştirin.

@@ -17,7 +17,7 @@ _**Note:** The extension is not yet available in the Chrome Web Store._
 
 For those who want to use this extension immediately or contribute to its development, follow the steps below.
 
-1. Clone the Github repository to your computer or download it as a ZIP file.
+1. Clone the Github repository to your computer or download the [latest release](https://github.com/emirhansirkeci/leaper/releases).
 2. Open your Chrome browser and click on the three dots in the upper right corner.
 3. In the menu that opens, go to `Extensions` and click the `Manage extensions` button.
 4. Enable `Developer mode` option in the upper right corner.
