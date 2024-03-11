@@ -1,5 +1,16 @@
 [![tr](https://img.shields.io/badge/lang-tr-blue.svg)](https://github.com/emirhansirkeci/skip-it/blob/main/README-tr.md)
 
+# Leaper
+
+Leaper is a Chrome extension designed to help you watch something without disrupting your comfort.
+
+## Supported Sites
+
+- **Netflix:**
+  _Especially when watching a series, it automatically skips the intro and credits to immediately move on to the next episode._
+- **Youtube:**
+  _Automatically skips ads when the **skip ad** button is available on the page_
+
 ## How to Install and Use the Extension
 
 _**Note:** The extension is not yet available in the Chrome Web Store._
@@ -12,10 +23,3 @@ For those who want to use this extension immediately or contribute to its develo
 4. Enable `Developer mode` option in the upper right corner.
 5. Click `Load unpackaged` and choose the folder you downloaded.
 6. After you successfully install the extension, you can start using it by refreshing your active tabs.
-
-## Supported Sites
-
-- **Netflix:**
-  _Especially when watching a series, it automatically skips the intro and credits to immediately move on to the next episode._
-- **Youtube:**
-  _Automatically skips ads when the **skip ad** button is available on the page_
