@@ -9,7 +9,7 @@ Leaper is a Chrome extension designed to help you watch something without disrup
 - **Netflix:**
   _Especially when watching a series, it automatically skips the intro and credits to immediately move on to the next episode._
 - **Youtube:**
-  _Automatically skips ads when the **skip ad** button is available on the page_
+  _Automatically skips ads when the **skip ad** button is available on the page._
 
 ## How to Install and Use the Extension
 
