@@ -1,9 +1,5 @@
 chrome.runtime.onMessage.addListener(async function (request) {
   if (request.activeSite === "youtube") {
-    console.log({
-      status: "Working well",
-    });
-
     main();
   }
 });
