@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Skip It",
+  "name": "Leaper",
   "version": "1.0.0",
-  "description": "Skip it",
+  "description": "Skips intros, outros, episodes or ads for you.",
   "permissions": ["storage"],
   "host_permissions": [
     "https://www.youtube.com/*",
@@ -47,7 +47,7 @@
     }
   ],
   "action": {
-    "default_title": "Skip it",
+    "default_title": "Leaper",
     "default_popup": "./popup/index.html"
   }
 }
