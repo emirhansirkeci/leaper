@@ -5,9 +5,7 @@ chrome.runtime.onMessage.addListener(async function (request) {
 });
 
 async function main() {
-  const targetElement = document.querySelector(
-    "#appMountPoint > div > div > div.watch-video"
-  );
+  const targetElement = document.querySelector(".watch-video");
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
